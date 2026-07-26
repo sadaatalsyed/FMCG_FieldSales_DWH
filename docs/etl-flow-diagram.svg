@@ -1,0 +1,84 @@
+<svg viewBox="0 0 1600 950" xmlns="http://www.w3.org/2000/svg" font-family="Segoe UI, Arial, sans-serif">
+<rect width="1600" height="950" fill="#0f1420"/>
+<text x="800.0" y="40" fill="#f5f7fa" font-size="24" font-weight="700" text-anchor="middle">SSIS ETL Pipeline — OLTP to SSAS/Power BI</text>
+<defs>
+<marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+<path d="M0,0 L8,3 L0,6 Z" fill="#8b98a8"/>
+</marker>
+</defs>
+<rect x="30.0" y="80" width="260.0" height="55" rx="10" fill="#1f6f5c"/>
+<text x="160.0" y="105" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">OLTP Source</text>
+<text x="160.0" y="125" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">(SQL Server)</text>
+<rect x="30.0" y="175" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="195" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Customer / Product / Distribution</text>
+<rect x="30.0" y="223" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="243" fill="#dfe6ee" font-size="12.5" text-anchor="middle">SA_SalesDataDump</text>
+<rect x="30.0" y="271" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="291" fill="#dfe6ee" font-size="12.5" text-anchor="middle">PrimaryOrder(Return)</text>
+<rect x="30.0" y="319" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="339" fill="#dfe6ee" font-size="12.5" text-anchor="middle">OrderBookerTargets</text>
+<rect x="30.0" y="367" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="387" fill="#dfe6ee" font-size="12.5" text-anchor="middle">InventorySnapshot</text>
+<rect x="30.0" y="415" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="435" fill="#dfe6ee" font-size="12.5" text-anchor="middle">SA_CustomerRoute</text>
+<rect x="30.0" y="463" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#1f6f5c" stroke-width="1.5"/>
+<text x="160.0" y="483" fill="#dfe6ee" font-size="12.5" text-anchor="middle">NonProductiveCustomers</text>
+<line x1="295.0" y1="300" x2="340.0" y2="300" stroke="#8b98a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="350.0" y="80" width="260.0" height="55" rx="10" fill="#2b6cb0"/>
+<text x="480.0" y="105" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">SSIS Packages</text>
+<text x="480.0" y="125" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">(1 Data Flow / query)</text>
+<rect x="350.0" y="175" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="480.0" y="195" fill="#dfe6ee" font-size="12.5" text-anchor="middle">OLE DB Source (extraction SELECT)</text>
+<rect x="350.0" y="223" width="260.0" height="50" rx="8" fill="#1b2434" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="480.0" y="243" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Derived Column</text>
+<text x="480.0" y="259" fill="#dfe6ee" font-size="12.5" text-anchor="middle">(surrogate keys, DateKey)</text>
+<rect x="350.0" y="287" width="260.0" height="50" rx="8" fill="#1b2434" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="480.0" y="307" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Derived Column</text>
+<text x="480.0" y="323" fill="#dfe6ee" font-size="12.5" text-anchor="middle">(Cases/Kg/Tons calc)</text>
+<rect x="350.0" y="351" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="480.0" y="371" fill="#dfe6ee" font-size="12.5" text-anchor="middle">OLE DB Destination</text>
+<line x1="615.0" y1="300" x2="660.0" y2="300" stroke="#8b98a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="670.0" y="80" width="260.0" height="55" rx="10" fill="#805ad5"/>
+<text x="800.0" y="105" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">SalesAssistDWH</text>
+<text x="800.0" y="125" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">(SQL Server)</text>
+<rect x="670.0" y="175" width="260.0" height="66" rx="8" fill="#1b2434" stroke="#805ad5" stroke-width="1.5"/>
+<text x="800.0" y="195" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Dimensions</text>
+<text x="800.0" y="211" fill="#dfe6ee" font-size="12.5" text-anchor="middle">(Product, Customer, Distribution,</text>
+<text x="800.0" y="227" fill="#dfe6ee" font-size="12.5" text-anchor="middle">OrderBooker, Van, Batch, Date)</text>
+<rect x="670.0" y="255" width="260.0" height="66" rx="8" fill="#1b2434" stroke="#805ad5" stroke-width="1.5"/>
+<text x="800.0" y="275" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Facts</text>
+<text x="800.0" y="291" fill="#dfe6ee" font-size="12.5" text-anchor="middle">(SalesDataDump, PrimaryOrders,</text>
+<text x="800.0" y="307" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Stock, Targets, Route, NPC)</text>
+<rect x="670.0" y="335" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#805ad5" stroke-width="1.5"/>
+<text x="800.0" y="355" fill="#dfe6ee" font-size="12.5" text-anchor="middle">AssignedShops (view)</text>
+<line x1="935.0" y1="300" x2="980.0" y2="300" stroke="#8b98a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="990.0" y="80" width="260.0" height="55" rx="10" fill="#c05621"/>
+<text x="1120.0" y="105" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">SSAS Tabular</text>
+<text x="1120.0" y="125" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">Model</text>
+<rect x="990.0" y="175" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#c05621" stroke-width="1.5"/>
+<text x="1120.0" y="195" fill="#dfe6ee" font-size="12.5" text-anchor="middle">18 tables / 37 relationships</text>
+<rect x="990.0" y="223" width="260.0" height="34" rx="8" fill="#1b2434" stroke="#c05621" stroke-width="1.5"/>
+<text x="1120.0" y="243" fill="#dfe6ee" font-size="12.5" text-anchor="middle">~120 DAX measures</text>
+<rect x="990.0" y="271" width="260.0" height="50" rx="8" fill="#1b2434" stroke="#c05621" stroke-width="1.5"/>
+<text x="1120.0" y="291" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Scheduled processing</text>
+<text x="1120.0" y="307" fill="#dfe6ee" font-size="12.5" text-anchor="middle">after SSIS completes</text>
+<line x1="1255.0" y1="300" x2="1300.0" y2="300" stroke="#8b98a8" stroke-width="2.5" marker-end="url(#arrow)"/>
+<rect x="1310.0" y="80" width="260.0" height="55" rx="10" fill="#2f855a"/>
+<text x="1440.0" y="105" fill="#ffffff" font-size="16" font-weight="700" text-anchor="middle">Consumption</text>
+<rect x="1310.0" y="175" width="260.0" height="50" rx="8" fill="#1b2434" stroke="#2f855a" stroke-width="1.5"/>
+<text x="1440.0" y="195" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Power BI Service</text>
+<text x="1440.0" y="211" fill="#dfe6ee" font-size="12.5" text-anchor="middle">(scheduled refresh)</text>
+<rect x="1310.0" y="239" width="260.0" height="66" rx="8" fill="#1b2434" stroke="#2f855a" stroke-width="1.5"/>
+<text x="1440.0" y="259" fill="#dfe6ee" font-size="12.5" text-anchor="middle">Excel</text>
+<text x="1440.0" y="275" fill="#dfe6ee" font-size="12.5" text-anchor="middle">(Analyze in Excel /</text>
+<text x="1440.0" y="291" fill="#dfe6ee" font-size="12.5" text-anchor="middle">PivotTables)</text>
+<text x="60" y="705" fill="#f5f7fa" font-size="15" font-weight="700">Load patterns</text>
+<circle cx="70" cy="720" r="4" fill="#c05621"/>
+<text x="86" y="725" fill="#c9d1d9" font-size="13.5">Incremental loads (date-range params): SalesDataDump, PrimaryOrders, CustomerRoute, NonProductiveCustomers</text>
+<circle cx="70" cy="752" r="4" fill="#c05621"/>
+<text x="86" y="757" fill="#c9d1d9" font-size="13.5">Snapshot load (daily, SnapShotDate >= today-1): InventorySnapshot -> New_Stock</text>
+<circle cx="70" cy="784" r="4" fill="#c05621"/>
+<text x="86" y="789" fill="#c9d1d9" font-size="13.5">Monthly refresh (current month only): OrderBookerTargets / DistributionTargets -> New_Targets / New_SalesTargets</text>
+<circle cx="70" cy="816" r="4" fill="#c05621"/>
+<text x="86" y="821" fill="#c9d1d9" font-size="13.5">Full refresh (small dims, truncate + reload): Product, Customer, Distribution, OrderBooker, Salesman, Van, Batch</text>
+</svg>
