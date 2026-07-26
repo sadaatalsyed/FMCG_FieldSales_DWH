@@ -8,17 +8,17 @@ Task, and each generates the surrogate keys (`CONCAT(100, <ID>)` pattern) and `D
 | File | Target table | Load type |
 |---|---|---|
 | `Extract_CustomerRoute.sql` | `Cube_CustomerRoute` | Incremental (CreatedOn between params) |
-| `Extract_Batch.sql` | `New_Batch` | Full refresh |
-| `Extract_Product.sql` | `New_Product` | Full refresh |
+| `Extract_Batch.sql` | `New_Batch` | Incremental (New ones only) |
+| `Extract_Product.sql` | `New_Product` | Incremental (New ones only) |
 | `Extract_SecondarySales.sql` | `SalesDataDump` | Incremental (date range) |
-| `Extract_Customer.sql` | `New_Customers` | Full refresh |
-| `Extract_Distribution.sql` | `New_Distribution` | Full refresh |
-| `Extract_OrderBooker.sql` | `New_OrderBooker` | Full refresh |
+| `Extract_Customer.sql` | `New_Customers` | Incremental (New ones only) |
+| `Extract_Distribution.sql` | `New_Distribution` | Incremental (New ones only) |
+| `Extract_OrderBooker.sql` | `New_OrderBooker` | Incremental (New ones only) |
 | `Extract_PrimaryOrders.sql` | `New_PrimaryOrders` | Incremental (Sales UNION ALL Return) |
-| `Extract_Salesman.sql` | `New_Salesman` | Full refresh |
+| `Extract_Salesman.sql` | `New_Salesman` | Incremental (New ones only) |
 | `Extract_Stock.sql` | `New_Stock` | Incremental (SnapShotDate >= today-1) |
 | `Extract_Targets.sql` | `New_Targets` | Monthly (current month) |
-| `Extract_Van.sql` | `New_Vans` | Full refresh |
+| `Extract_Van.sql` | `New_Vans` | Incremental (New ones only) |
 | `Extract_NonProductiveCustomers.sql` | `NonProductiveCustomers` | Incremental (CreatedOn between params) |
 | `Extract_DistributionTargets.sql` | `New_SalesTargets` | Monthly (current month) |
 
